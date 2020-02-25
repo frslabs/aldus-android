@@ -1,5 +1,5 @@
 # ALDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.1.2-blue)
+![version](https://img.shields.io/badge/version-v1.1.3-blue)
 
 Aldus SDK is a **Peer-to-peer**, **Feature-rich**, **Realtime** Identity Verification Solution through Video Chat. 
 
@@ -110,7 +110,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     //Aldus Sdk Dependencies
-    implementation 'com.frslabs.android.sdk:aldus:1.1.2' 
+    implementation 'com.frslabs.android.sdk:aldus:1.1.3' 
     implementation 'org.webrtc:google-webrtc:1.0.30039'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
     
