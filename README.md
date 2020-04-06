@@ -1,5 +1,5 @@
 # ALDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.1.3-blue)
+![version](https://img.shields.io/badge/version-v1.1.8-blue)
 
 Aldus SDK is a **Peer-to-peer**, **Feature-rich**, **Realtime** Identity Verification Solution through Video Chat. 
 
@@ -110,12 +110,12 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     //Aldus Sdk Dependencies
-    implementation 'com.frslabs.android.sdk:aldus:1.1.3' 
+    implementation 'com.frslabs.android.sdk:aldus:1.1.8' 
     implementation 'org.webrtc:google-webrtc:1.0.30039'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
     
     //Octus Aadhaar Offline
-    implementation 'com.frslabs.android.sdk.octus:aadhaaroffline:1.0.4'
+    implementation 'com.frslabs.android.sdk.octus:aadhaaroffline:1.0.6'
     implementation 'net.lingala.zip4j:zip4j:1.3.2'
     implementation 'com.google.code.gson:gson:2.8.6'
     
@@ -244,14 +244,17 @@ Error codes and their meaning are tabulated below
 
 | Label          | Code |Message                 |
 | -------------- | ----- |---------------------- |
-| ERROR_CODE_PERMISSION | 1000 | Required permissions for Aldus Sdk were not granted |
-| ERROR_CODE_EXPIRED_LICENSE | 1001 | Aldus Sdk License has expired |
-| ERROR_CODE_INVALID_LICENSE | 1002 | Invalid Aldus Sdk License |
-| ERROR_CODE_INVALID_CONFIG | 1003 | Invalid Aldus Sdk Config |
+| ERROR_CODE_PERMISSION | 1000 | Required permissions for Aldus SDK were not granted |
+| ERROR_CODE_EXPIRED_LICENSE | 1001 | Aldus SDK License has expired |
+| ERROR_CODE_INVALID_LICENSE | 1002 | Invalid Aldus SDK License |
+| ERROR_CODE_INVALID_CONFIG | 1003 | Invalid Aldus SDK Config |
+| ERROR_CODE_TNC_LENGTH_EXCEEDED | 1004 | Terms and conditions URL should not exceed 120 characters |
+| ERROR_CODE_TNC_INVALID_FORMAT | 1005 | Invalid format for terms and conditions URL |
 | ERROR_CODE_NETWORK_ERROR | 1100 | Network Error |
-| ERROR_CODE_INTERRUPTED | 1200 | Aldus Sdk Interrupted |
+| ERROR_CODE_INTERRUPTED | 1200 | Aldus SDK Interrupted |
 | ERROR_CODE_DENIED_LOCATION | 1201 | User denied enabling location |
 | ERROR_CODE_OUT_OF_COUNTRY | 1202 | User's location was found to be outside the country |
+| ERROR_CODE_LOCATION_ERROR | 1203 | Error Determining Location |
 
 ## Aldus Parameters
 
@@ -266,6 +269,18 @@ Error codes and their meaning are tabulated below
 - `setApiCredentials(AldusApiCredentials aldusApiCredentials)`   ***(Required)***
   
   Sets the `AldusApiCredentials` , required for networking inside the Aldus SDK
+  
+- `setTermsAndConditionsUrl(String termsAndConditionsUrl)`   ***(Optional)***
+
+  Sets the `termsAndConditionsUrl` in the Terms And Conditions Screen. If not set , only the basic text is displayed.
+
+- `skipTermsAndConditionsScreen()`   ***(Optional)***
+
+  Skips the Terms And Conditions Screen. By Default, a basic Terms And Conditions Screen is included in the flow. If `setTermsAndConditionsUrl` is used its value is ignored.
+
+- `skipInstructionScreen()`   ***(Optional)***
+
+  Skips the Instruction Screen. By Default, a basic instruction screen is included in the flow.
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
