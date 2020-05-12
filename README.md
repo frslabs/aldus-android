@@ -1,5 +1,5 @@
 # ALDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.1.8-blue)
+![version](https://img.shields.io/badge/version-v1.2.0-blue)
 
 Aldus SDK is a **Peer-to-peer**, **Feature-rich**, **Realtime** Identity Verification Solution through Video Chat. 
 
@@ -69,6 +69,15 @@ allprojects {
             }
         }
         
+        maven {
+            // Maven Url and Credentials for FRSLABS WebRTC SDK
+            url "https://frslabs-webrtc.repo.frslabs.space/"
+            credentials {
+                username 'repo-username' 
+                password 'repo-password' 
+            }
+        }
+        
     }
 }
 ```
@@ -111,7 +120,7 @@ dependencies {
    
     //Aldus Sdk Dependencies
     implementation 'com.frslabs.android.sdk:aldus:1.1.8' 
-    implementation 'org.webrtc:google-webrtc:1.0.30039'
+    implementation 'com.frslabs.android.sdk:webrtc:1.0.0'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
     
     //Octus Aadhaar Offline
@@ -274,6 +283,10 @@ Error codes and their meaning are tabulated below
 
   Sets the `termsAndConditionsUrl` in the Terms And Conditions Screen. If not set , only the basic text is displayed.
 
+- `setInitialConnectionTimeout(int initConnTimeoutValue)` ***(Optional)***
+
+  Sets the `initConnTimeoutValue` . The call automatically ends if the opposite peer fails to join the call in `initConnTimeoutValue` seconds. Default is 60 Seconds (1 Minute). Input values can range between 60 Seconds (1 Minute) and 300 Seconds (5 Minutes)
+  
 - `skipTermsAndConditionsScreen()`   ***(Optional)***
 
   Skips the Terms And Conditions Screen. By Default, a basic Terms And Conditions Screen is included in the flow. If `setTermsAndConditionsUrl` is used its value is ignored.
