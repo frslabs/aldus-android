@@ -1,5 +1,5 @@
 # ALDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.2.0-blue)
+![version](https://img.shields.io/badge/version-v1.2.2-blue)
 
 Aldus SDK is a **Peer-to-peer**, **Feature-rich**, **Realtime** Identity Verification Solution through Video Chat. 
 
