@@ -119,7 +119,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     //Aldus Sdk Dependencies
-    implementation 'com.frslabs.android.sdk:aldus:1.1.8' 
+    implementation 'com.frslabs.android.sdk:aldus:1.2.2' 
     implementation 'com.frslabs.android.sdk:webrtc:1.0.0'
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
     
